@@ -5,31 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>
       Frontend Mentor | Huddle landing page with single introductory section
     </title>
-
-    <!-- No dude en eliminar estos estilos o personalizarlos en su propia hoja de estilo 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
+      :root{
+        --Mobile_Layout: 375px;
+        --Desktop_Layout: 1440px;
+        --Violet: hsl(257, 40%, 49%);
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+
+      body{
+        margin: 0;
+        background: var(--Violet);
+        background-image: url(./images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 100vh;
+        overflow: hidden;
+        font-family: 'Quicksand', sans-serif;
+        box-sizing: border-box;
       }
+       
+      .Huddle{
+        margin:40px 40px 40px 40px;
+        padding: 20px;
+      }
+  
+      .Main{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 40px;
+        margin-top: 80px;
+      }
+
+      .Main__image--size{
+        width: 800px;
+        height: 600px;
+      }
+
+      .Main__text{
+        margin-top: 30px;
+        justify-self: center;
+        width: 600px;
+      }
+
+      .Main__title{
+        color: white;
+        font-size: 40px;
+      }
+      
+      .Main__description{
+        color: white;
+        font-size: 20px;
+      }
+
+      .Main__button{
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        width: 220px;
+        height: 58px;
+        color: var(--Violet);
+        font-size: 20px;
+        border-radius: 50px;
+        font-family: 'Quicksand', sans-serif;
+        margin-top: 10px;
+        box-shadow:0 8px 6px -6px black;
+      }
+
+      .Huddle__footer{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 190px;
+      }
+
+      .Huddle__footer img{
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+      }
+
     </style>
   </head>
   <body>
-    Build The Community Your Fans Will Love Huddle re-imagines the way we build
-    communities. You have a voice, but so does your audience. Create connections
-    with your users as you engage in genuine discussion. Register
+    <div class="Huddle">
+      <header class="Huddle__header">
+        <img  src="./images/logo.svg" alt="Logo">
+      </header>
+
+      <main class="Main">
+          <img class="Main__image--size"src="./images/illustration-mockups.svg" alt="mockups">
+        <div class="Main__text">
+          <h1 class="Main__title">Build The Community Your Fans Will Love</h1>
+          <p class="Main__description">
+            Huddle re-imagines the way we build communities. You have
+            a voice, but so does your audience. Create connections with 
+            your users as you engage in genuine discussion.
+          </p>
+          <button class="Main__button" type="button">Register</button>
+        </div>
+      </main>
+
+      <footer class="Huddle__footer">
+        <img src="./images/facebook.png" alt="facebook">
+        <img src="./images/Twiiter.png" alt="twitter">
+        <img src="./images/instagram.png" alt="instagram">
+      </footer>
+    
+    </div>
   </body>
 </html>
