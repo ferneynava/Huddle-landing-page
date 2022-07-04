@@ -18,13 +18,15 @@
     <style>
       :root{
         --Violet: hsl(257, 40%, 49%);
+        --imgdesktop:url(./images/bg-desktop.svg);
+        --imgmobile:url(./images/bg-mobile.svg);
       }
 
       body{
         margin: 0;
         padding: 0;
         background: var(--Violet);
-        background-image: url(./images/bg-desktop.svg);
+        background-image: var(--imgdesktop);
         background-repeat: no-repeat;
         background-size: 100%;
         font-family: 'Quicksand', sans-serif;   
@@ -34,9 +36,7 @@
       }
        
       .Huddle{
-        margin-top: 70px;
-        margin-left: 70px;
-        margin-right: 90px;
+        margin: 70px 90px 0 70px;
       }
 
       .Main{
@@ -89,16 +89,14 @@
       
       @media (max-width: 1296px){
         body{
-        background-image: url(./images/bg-mobile.svg);
+        background-image: var(--imgmobile);
         background-repeat: no-repeat;
         background-size: cover;
         overflow: scroll;
       }
 
       .Huddle{
-        margin-top: 30px;
-        margin-left: 30px;
-        margin-right: 30px;
+        margin: 30px 30px 0 30px;
       }
 
       .Huddle__header{
